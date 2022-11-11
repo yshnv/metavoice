@@ -1,0 +1,7 @@
+{
+  "name": "metavoice",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

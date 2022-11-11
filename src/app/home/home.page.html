@@ -1,0 +1,82 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <img class="logo" src="assets/metavoice.svg" alt="" />
+    <!-- <ion-title> metavoice </ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item fill="outline" mode="md">
+    <ion-label position="floating">Write your text here*</ion-label>
+    <ion-textarea [autoGrow]="true" [(ngModel)]="inputText"></ion-textarea>
+  </ion-item>
+  <ion-item fill="outline" mode="md">
+    <ion-label position="floating">Voice</ion-label>
+    <ion-select
+      (ionChange)="selectVoice($event)"
+      [value]="selectedVoice"
+      multiple="false"
+      placeholder="Select Pizza"
+    >
+      <ion-select-option [value]="i" *ngFor="let voice of voices;let i= index"
+        >{{voice.name}} - {{voice.lang}}</ion-select-option
+      >
+    </ion-select>
+  </ion-item>
+  <!-- <ion-item mode="md" lines="none"> -->
+  <ion-range
+    min="0.0"
+    max="2.0"
+    dualKnobs="false"
+    pin="true"
+    snaps="true"
+    step="0.2"
+    ticks="false"
+    [pinFormatter]="pitchFormatter"
+    [value]="pitch"
+    color="primary"
+    (ionChange)="pitchChange($event)"
+  >
+    <ion-label slot="start">0</ion-label>
+    <ion-label slot="end">2.0</ion-label>
+  </ion-range>
+
+  <!-- </ion-item> -->
+  <ion-range
+    min="0.0"
+    max="2.0"
+    dualKnobs="false"
+    pin="true"
+    snaps="true"
+    step="0.2"
+    ticks="false"
+    [pinFormatter]="pitchFormatter"
+    [value]="volume"
+    color="primary"
+    (ionChange)="volumeChange($event)"
+  >
+    <ion-label slot="start">0</ion-label>
+    <ion-label slot="end">2.0</ion-label>
+  </ion-range>
+  <ion-range
+    min="0.0"
+    max="2.0"
+    dualKnobs="false"
+    pin="true"
+    snaps="true"
+    step="0.2"
+    ticks="false"
+    [pinFormatter]="pitchFormatter"
+    [value]="rate"
+    color="primary"
+    (ionChange)="rateChange($event)"
+  >
+    <ion-label slot="start">0</ion-label>
+    <ion-label slot="end">2.0</ion-label>
+  </ion-range>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" mode="md">
+    <ion-fab-button (click)="speak(inputText)">
+      <ion-icon name="play"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
