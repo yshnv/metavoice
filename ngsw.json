@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1668172989548,
+  "timestamp": 1668173162132,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -117,7 +117,7 @@
     "/assets/metavoice.svg": "e006f654c6e4fbb40751d0e67ba7a26ac186b7c9",
     "/common.js": "483abafd7188033d54de436396d11edd0b38c0da",
     "/default-node_modules_ionic_core_dist_esm_data-cb72448c_js-node_modules_ionic_core_dist_esm_th-29e28e.js": "6653b173503ccf0b26c1c6b999357a0bca76bb22",
-    "/index.html": "6f31252f5f086139c7230c14c98dab51faa9bcbc",
+    "/index.html": "877b7e16dd9a00662b111a259a8735964a69f31c",
     "/main.js": "adce0f642e98d7c7fee8a0788b85ba1a39929c7b",
     "/manifest.webmanifest": "9a088b7c4339228d1082e666ce105dc889bc180c",
     "/node_modules_capacitor-community_text-to-speech_dist_esm_web_js.js": "57d79ed3feac13c5ff7f2b345c0346e02869101a",
