@@ -10,7 +10,7 @@ export class HomePage implements OnInit {
   inputText =
     'An easy way to convert text to voice that’s fast and straightforward – it’ll make your message more catchy and inclusive.';
   voices = [];
-  selectedVoice = 0;
+  selectedVoice = 150;
   pitch = 1.0;
   volume = 1.0;
   rate = 1.0;
@@ -19,9 +19,16 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.getSupportedVoices();
   }
-  getSupportedVoices = async () => {
-    this.voices = await (await TextToSpeech.getSupportedVoices()).voices;
-  };
+  async getSupportedVoices() {
+    // this.voices = (await TextToSpeech.getSupportedVoices()).voices;
+    await TextToSpeech.getSupportedVoices().then((x) => {
+      console.log(
+        '🚀 ~ file: home.page.ts ~ line 25 ~ HomePage ~ getSupportedVoices ~ data',
+        x
+      );
+      this.voices = x.voices;
+    });
+  }
   selectVoice(ev: any) {
     this.selectedVoice = ev.detail.value;
   }
