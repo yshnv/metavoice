@@ -16,15 +16,12 @@ export class HomePage implements OnInit {
   rate = 1.0;
   languages = [];
   constructor() {}
-  async ngOnInit(): Promise<void> {
-    TextToSpeech.getSupportedVoices().then((x) => {
-      this.voices = x.voices;
-
-      TextToSpeech.getSupportedLanguages().then((z) => {
-        this.languages = z.languages;
-      });
-    });
+  ngOnInit() {
+    this.getSupportedVoices();
   }
+  getSupportedVoices = async () => {
+    this.voices = await (await TextToSpeech.getSupportedVoices()).voices;
+  };
   selectVoice(ev: any) {
     this.selectedVoice = ev.detail.value;
   }
