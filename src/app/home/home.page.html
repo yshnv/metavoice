@@ -1,7 +1,6 @@
 <ion-header mode="md">
   <ion-toolbar>
     <img class="logo" src="assets/metavoice.svg" alt="" />
-    <!-- <ion-title> metavoice </ion-title> -->
   </ion-toolbar>
 </ion-header>
 
@@ -16,7 +15,7 @@
       (ionChange)="selectVoice($event)"
       [value]="selectedVoice"
       multiple="false"
-      placeholder="Select Pizza"
+      placeholder="Select voice"
     >
       <ion-select-option [value]="i" *ngFor="let voice of voices;let i= index"
         >{{voice.name}} - {{voice.lang}}</ion-select-option
@@ -24,6 +23,7 @@
     </ion-select>
   </ion-item>
   <!-- <ion-item mode="md" lines="none"> -->
+
   <ion-range
     min="0.0"
     max="2.0"
@@ -37,6 +37,7 @@
     color="primary"
     (ionChange)="pitchChange($event)"
   >
+    <ion-label class="labelSec" slot="start">Pitch</ion-label>
     <ion-label slot="start">0</ion-label>
     <ion-label slot="end">2.0</ion-label>
   </ion-range>
@@ -55,6 +56,8 @@
     color="primary"
     (ionChange)="volumeChange($event)"
   >
+    <ion-label class="labelSec" slot="start">Volume</ion-label>
+
     <ion-label slot="start">0</ion-label>
     <ion-label slot="end">2.0</ion-label>
   </ion-range>
@@ -71,6 +74,8 @@
     color="primary"
     (ionChange)="rateChange($event)"
   >
+    <ion-label class="labelSec" slot="start">Rate</ion-label>
+
     <ion-label slot="start">0</ion-label>
     <ion-label slot="end">2.0</ion-label>
   </ion-range>
