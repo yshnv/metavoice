@@ -5,7 +5,7 @@
 ![metavoice](https://raw.githubusercontent.com/yshnv/metavoice/main/src/assets/metavoice.svg)
 
 
-![nodejs workflow](https://github.com/yshnv/metavoice/actions/workflows/node.js.yml/badge.svg)
+![nodejs workflow](https://github.com/yshnv/metavoice/actions/workflows/node.js.yml/badge.svg) [![GitHub issues](https://img.shields.io/github/issues/yshnv/metavoice)](https://github.com/yshnv/metavoice/issues) [![GitHub stars](https://img.shields.io/github/stars/yshnv/metavoice)](https://github.com/yshnv/metavoice/stargazers) [![GitHub license](https://img.shields.io/github/license/yshnv/metavoice)](https://github.com/yshnv/metavoice/blob/main/LICENSE)
 
 Metavoice is text to speech convertor developed using [Ionic Framework](https://ionicframework.com/) and [CapacitorJS](https://capacitorjs.com/)
 
